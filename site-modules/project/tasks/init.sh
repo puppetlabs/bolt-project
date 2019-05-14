@@ -1,8 +1,2 @@
-#!/bin/sh
-
-# This is shell task that prints the hostname and the value
-# of a task parameter called 'message'. Note the shebang is
-# the first line of the file and will be used as the interpreter
-# on the target system.
-
-echo $(hostname) got passed the message: $PT_message
+# Example file in which task code would be written, note the corresponding init.json file where task metadata would be defined
+# Docs Reference: https://puppet.com/docs/bolt/latest/writing_tasks_and_plans.html#plans

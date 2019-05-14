@@ -1,8 +1,0 @@
-{
-  "description": "This is an example task, Exampel: bolt task run project --targets localhost",
-  "parameters": {
-    "message" : {
-      "description": "Message to echo with the shell task",
-      "type": "String[1]"
-    }
-}

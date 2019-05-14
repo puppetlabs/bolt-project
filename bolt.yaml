@@ -1,7 +1,2 @@
 ## This is an example bolt configuration file.
-## In this case the global defaults for the ssh transport are configured
-# ---
-# ssh:
-#   host-key-check: false
-#   private-key: ~/.ssh/bolt_id
-#   user: foo
+## Docs Reference: https://puppet.com/docs/bolt/latest/bolt_configuration_options.html
