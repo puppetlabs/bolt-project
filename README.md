@@ -9,7 +9,7 @@ Bolt is a Ruby command-line tool for executing commands, scripts, and tasks on r
 
 > Installing bolt from a gem is not recommended since core modules will not be available. Please [install bolt](https://puppet.com/docs/bolt/latest/bolt_installing.md) as a package
 
-This repository is an example skeleton Bolt Project Directory or `Boltdir`. A `Boltdir` contains all of the configuration, code, and data loaded by Bolt. Read more about the project directory structure at the following [link.](https://puppet.com/docs/bolt/latest/bolt_project_directories.html#project-directories)
+This repository is an example skeleton Bolt project. A Bolt project contains all of the configuration, code, and data loaded by Bolt. Read more about the project directory structure at the following [link.](https://puppet.com/docs/bolt/latest/bolt_project_directories.html#project-directories)
 
 ## Directory structure
 ```
