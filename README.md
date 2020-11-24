@@ -9,11 +9,11 @@ Bolt is a Ruby command-line tool for executing commands, scripts, and tasks on r
 
 > Installing bolt from a gem is not recommended since core modules will not be available. Please [install bolt](https://puppet.com/docs/bolt/latest/bolt_installing.md) as a package
 
-This repository is an example skeleton Bolt project. A Bolt project contains all of the configuration, code, and data loaded by Bolt. Read more about the project directory structure at the following [link.](https://puppet.com/docs/bolt/latest/bolt_project_directories.html#project-directories)
+This repository is an example skeleton Bolt project. A Bolt project contains all of the configuration, code, and data loaded by Bolt. Read about [Bolt projects](https://puppet.com/docs/bolt/latest/projects.html) to learn more.
 
 ## Directory structure
 ```
-├── bolt.yaml
+├── bolt-project.yaml
 ├── data
 │   └── common.yaml
 ├── hiera.yaml
@@ -21,18 +21,16 @@ This repository is an example skeleton Bolt project. A Bolt project contains all
 ├── modules
 ├── Puppetfile
 ├── README.md
-└── site-modules
-    └── project
-        ├── manifests
-        │   └── init.pp
-        ├── plans
-        │   └── init.pp
-        └── tasks
-            ├── init.json
-            └── init.sh
+├── manifests
+│   └── init.pp
+├── plans
+│   └── init.pp
+└── tasks
+    ├── init.json
+    └── init.sh
 ```
-### bolt.yaml
-The `bolt.yaml` file sets global configuration options in the context of the bolt project. [bolt.yaml reference](https://puppet.com/docs/bolt/latest/bolt_configuration_options.html)
+### bolt-project.yaml
+The `bolt-project.yaml` file sets configuration options in the context of the bolt project. [bolt-project.yaml reference](https://puppet.com/docs/bolt/latest/bolt_project_reference.html)
 
 ### data
 The `data` directory is the default location to add `hiera` data for the project. [Hiera reference](https://puppet.com/docs/bolt/latest/applying_manifest_blocks.html#concept-4446)
@@ -47,16 +45,16 @@ The `inventory.yaml` file contains information about targets. You can group targ
 The `Puppetfile` is used to install modules from the [Puppet Forge](https://forge.puppet.com/) or from a Git repository. Modules specified in the Puppetfile will be downloaded and installed into the `modules` directory. [Puppetfile reference](https://puppet.com/docs/bolt/latest/installing_tasks_from_the_forge.html#task-8928)
 
 ### site-modules
-The `site-modules` directory contains the project specific `Bolt` modules. In this example there is a single module called `project`.
+The `site-modules` directory contains the project specific `Bolt` modules.
 
-### site-modules/project/manifests
-The module `manifest` directory is used for puppet manifest code that may be applied with Bolt.
+### manifests
+The `manifests` directory is used for Puppet manifest code that may be applied with Bolt.
 
-### site-modules/project/plans
-The `plans` directory contains plans. [Plans reference](https://puppet.com/docs/bolt/latest/writing_tasks_and_plans.html#plans)
+### plans
+The `plans` directory contains plans. [Plans reference](https://puppet.com/docs/bolt/latest/plans.html)
 
-### site-modules/project/tasks
-The `tasks` directory contains tasks. [Tasks reference](https://puppet.com/docs/bolt/latest/writing_tasks_and_plans.html#tasks)
+### tasks
+The `tasks` directory contains tasks. [Tasks reference](https://puppet.com/docs/bolt/latest/tasks.html)
 
 ## Getting Help
 
