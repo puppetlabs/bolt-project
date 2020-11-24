@@ -1,3 +1,7 @@
 ## This is an example bolt configuration file.
 ## Docs Reference: https://puppet.com/docs/bolt/latest/bolt_configuration_options.html
 name: myproject
+modules:
+  - name: puppetlabs/facts
+  - git: https://github.com/puppetlabs/puppetlabs-service
+    ref: main
