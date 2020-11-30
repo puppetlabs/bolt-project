@@ -13,6 +13,7 @@ This repository is an example skeleton Bolt project. A Bolt project contains all
 
 ## Directory structure
 ```
+├── .modules
 ├── bolt-project.yaml
 ├── data
 │   └── common.yaml
@@ -42,10 +43,17 @@ The default location for hiera configuration. [Hiera configuration reference](ht
 The `inventory.yaml` file contains information about targets. You can group targets and define connection configuration. [inventory.yaml reference](https://puppet.com/docs/bolt/latest/inventory_file.html)
 
 ### Puppetfile
-The `Puppetfile` is used to install modules from the [Puppet Forge](https://forge.puppet.com/) or from a Git repository. Modules specified in the Puppetfile will be downloaded and installed into the `modules` directory. [Puppetfile reference](https://puppet.com/docs/bolt/latest/installing_tasks_from_the_forge.html#task-8928)
+The `Puppetfile` acts as a lock file for modules listed in `bolt-project.yaml`. Bolt generates a
+Puppetfile each time you modify your modules with a Bolt command. Do not edit the Puppetfile
+directly. Instead, use Bolt commands to manage your modules, and rely on Bolt to manage the
+Puppetfile.
 
-### site-modules
-The `site-modules` directory contains the project specific `Bolt` modules.
+### .modules
+This is where modules defined in `bolt-project.yaml` are installed.
+
+### modules
+The `modules` directory contains project-specific `Bolt` modules, such as custom modules under
+development.
 
 ### manifests
 The `manifests` directory is used for Puppet manifest code that may be applied with Bolt.
